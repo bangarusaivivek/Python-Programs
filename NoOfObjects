@@ -1,0 +1,10 @@
+class Test:
+		count=0
+		def __init__(self):
+				Test.count +=1 
+		def getNoofObjects():
+				print('The Number of Objects created: ',Test.count)
+				
+t1=test()
+t2=test()
+Test.getNoofObjects()
