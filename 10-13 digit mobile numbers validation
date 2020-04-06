@@ -1,0 +1,36 @@
+import re
+
+s = input('Enter mobile number to validate')
+while(len(s)>=10 and len(s)<=13):
+    if len(s)==13:
+        m = re.fullmatch('[+][9][1][6-9]\d{9}',s)
+        if m != None:
+            print(s,"is a valid number")
+        else:
+            print(s,"is not a valid number")
+        break
+    elif len(s)==12:
+        m = re.fullmatch('[9][1][6-9]\d{9}',s)
+        if m != None:
+            print(s,"is a valid number")
+        else:
+            print(s,"is not a valid number")
+        break
+    elif len(s)==11:
+        m = re.fullmatch('[0][6-9]\d{9}',s)
+        if m != None:
+            print(s,"is a valid number")
+        else:
+            print(s,"is not a valid number")
+        break
+    elif len(s)==10:
+        m = re.fullmatch('[6-9]\d{9}',s)
+        if m != None:
+            print(s,"is a valid number")
+        else:
+            print(s,"is not a valid number")
+        break
+
+else:
+    print("Enter a valid mobile number")
+
